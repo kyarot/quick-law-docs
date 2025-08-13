@@ -2,41 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Legal Assistant Design System - Professional & Modern */
 
 @layer base {
   :root {
+    /* Brand Colors - Legal Professional Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 228 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 228 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 228 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Legal Blue Primary */
+    --primary: 214 87% 27%;
     --primary-foreground: 210 40% 98%;
+    --primary-light: 214 87% 35%;
+    --primary-glow: 214 87% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Gold Accent for Premium Feel */
+    --secondary: 45 93% 47%;
+    --secondary-foreground: 228 84% 4.9%;
+    --secondary-light: 45 93% 55%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 214 87% 35%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 214 87% 27%;
 
-    --radius: 0.5rem;
+    /* Success & Warning Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 228 84% 4.9%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 87% 27%), hsl(214 87% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 87% 27%) 0%, hsl(214 87% 35%) 50%, hsl(45 93% 47%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+
+    /* Shadows */
+    --shadow-legal: 0 10px 30px -10px hsl(214 87% 27% / 0.3);
+    --shadow-gold: 0 5px 20px -5px hsl(45 93% 47% / 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +81,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark Mode - Sophisticated Legal Theme */
+    --background: 228 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 228 84% 6%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 228 84% 6%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 214 87% 45%;
+    --primary-foreground: 228 84% 4.9%;
+    --primary-light: 214 87% 55%;
+    --primary-glow: 214 87% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 45 93% 55%;
+    --secondary-foreground: 228 84% 4.9%;
+    --secondary-light: 45 93% 65%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 214 87% 45%;
+    --accent-foreground: 228 84% 4.9%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 214 87% 45%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 87% 45%), hsl(214 87% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 93% 55%), hsl(45 93% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(228 84% 4.9%) 0%, hsl(214 87% 45%) 50%, hsl(45 93% 55%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+
+    /* Dark Mode Shadows */
+    --shadow-legal: 0 10px 30px -10px hsl(214 87% 45% / 0.4);
+    --shadow-gold: 0 5px 20px -5px hsl(45 93% 55% / 0.5);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +140,93 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Legal Assistant Custom Components */
+@layer components {
+  .legal-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .glass-effect {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .legal-shadow {
+    box-shadow: var(--shadow-legal);
+  }
+  
+  .gold-shadow {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .voice-pulse {
+    animation: voice-pulse 2s ease-in-out infinite;
+  }
+  
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  .slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+  
+  .legal-card-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .legal-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-legal);
+  }
+}
+
+/* Keyframe Animations */
+@keyframes voice-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
   }
 }

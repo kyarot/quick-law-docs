@@ -26,11 +26,14 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					light: 'hsl(var(--primary-light))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: 'hsl(var(--secondary-foreground))',
+					light: 'hsl(var(--secondary-light))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -51,6 +54,14 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -84,11 +95,62 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'voice-pulse': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.7',
+						transform: 'scale(1.05)'
+					}
+				},
+				'floating': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'slide-up': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0'
+					},
+					to: {
+						opacity: '1'
+					}
+				},
+				'scale-in': {
+					from: {
+						opacity: '0',
+						transform: 'scale(0.9)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'voice-pulse': 'voice-pulse 2s ease-in-out infinite',
+				'floating': 'floating 3s ease-in-out infinite',
+				'slide-up': 'slide-up 0.6s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.3s ease-out'
 			}
 		}
 	},
